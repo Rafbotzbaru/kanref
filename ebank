@@ -1,0 +1,23 @@
+let handler = async (m, { conn }) => {
+  let user = global.db.data.users[m.sender]
+  const caption = `
+「 *B A N K  P R E M I U M* 」
+│ 😈 *Name:* ${user.registered ? user.name : conn.getName(m.sender)}
+│ 🗿 *Atm:* ${user.atm > 0 ? 'Level ' + user.atm : '✖️'}
+│ 🔮 *Bank:* ${user.fullatm}
+│ 💹 *Money:* ${user.money} 💲
+│ 🌟 *Status:* ${user.premiumTime > 0 ? 'Premium' : 'Free'}
+│ 📑 *Registered:* ${user.registered ? 'Yes':'No'}
+│ 😎 *Ganteng/Cantik:* ${user.registered ? 'Yes': 'No'}
+🔊🔊  
+NB : HY DEK FITUR BANK ELITE\n MASIH BETA YA DEK
+
+`.trim()
+  conn.sendButton(m.chat, caption, global.wm, 'https://telegra.ph/file/0451b07945f7f9633b59b.jpg', [`💪Easy🗿`, '.menu'],m)
+}
+handler.help = ['ebank']
+handler.tags = ['rpg']
+handler.command = /^(ebank)$/i
+
+handler.premium = true
+export default handler
