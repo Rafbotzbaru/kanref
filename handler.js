@@ -110,6 +110,8 @@ export async function handler(chatUpdate) {
                 if (!isNumber(user.upgrader))
                     user.upgrader = 0
 
+                if (!isNumber(user.mbox)
+                    user.mbox = 0
                 if (!isNumber(user.common))
                     user.common = 0
                 if (!isNumber(user.uncommon))
@@ -234,13 +236,15 @@ export async function handler(chatUpdate) {
                     wood: 0,
                     rock: 0,
                     string: 0,
+ 
 
                     emerald: 0,
                     diamond: 0,
                     gold: 0,
                     iron: 0,
                     upgrader: 0,
-
+          
+                    mbox: 0,
                     common: 0,
                     uncommon: 0,
                     mythic: 0,
@@ -316,7 +320,7 @@ export async function handler(chatUpdate) {
                 if (!('antiToxic' in chat))
                     chat.antiToxic = false
                 if (!('simi' in chat))
-                    chat.simi = false
+                    chat.simi = true
                 if (!('nsfw' in chat))
                     chat.nsfw = false
                 if (!('premnsfw' in chat))
@@ -337,7 +341,7 @@ export async function handler(chatUpdate) {
                     sticker: false,
                     viewonce: true,
                     antiToxic: true,
-                    simi: false,
+                    simi: true,
                     expired: 0,
                     nsfw: false,
                     premnsfw: false,
