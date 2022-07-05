@@ -77,6 +77,7 @@ const inventory = {
 
   },
   crates: {
+    mbox: true, 
     common: true,
     uncommon: true,
     mythic: true,
