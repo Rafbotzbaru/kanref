@@ -163,14 +163,14 @@ global.reloadHandler = async function (restatConn) {
     conn.ev.off('creds.update', conn.credsUpdate)
   }
 
-  conn.welcome = '✦━━━━━━[ *WELCOME* ]━━━━━━✦\n\n┏––––––━━━━━━━━•\n│⫹⫺ @subject\n┣━━━━━━━━┅┅┅\n│( 👋 Hallo @user)\n├[ *INTRO* ]—\n│ *Nama:* \n│ *Umur:* \n│ *Gender:*\n┗––––––━━┅┅┅\n\n––––––┅┅ *DESCRIPTION* ┅┅––––––\n@desc'
-  conn.bye = '✦━━━━━━[ *GOOD BYE* ]━━━━━━✦\nSayonara *@user* 👋( ╹▽╹ )'
-  conn.spromote = '@user sekarang admin!'
-  conn.sdemote = '@user sekarang bukan admin!'
-  conn.sDesc = 'Deskripsi telah diubah ke \n@desc'
-  conn.sSubject = 'Judul grup telah diubah ke \n@subject'
-  conn.sIcon = 'Icon grup telah diubah!'
-  conn.sRevoke = 'Link group telah diubah ke \n@revoke'
+  conn.welcome = 'Hy @user Yatim Welcome To Alam Neraka'
+  conn.bye = 'Kontol @user Malah Out Ajg, Dadah @user Yatim,\nSubscribe Gw Ajg:\n*https://youtube.com/channel/UCY6WNM6jZlmfWULcG69rNbQ
+  conn.spromote = '.hidetag @user Yatim Malah Di Jadiin Admin Ajg!'
+  conn.sdemote = '.hidetag Aowwowk Kasian Anak Yatim Bukan Admin Lagi'
+  conn.sDesc = 'Deskripsi telah diubah ke *Video Bokep Diadmin* '
+  conn.sSubject = 'Nama Grup Yg Ajg Telah Diunah Ke : Grup Yatim'
+  conn.sIcon = 'Pp Gc Yg sEaNgD bEOy Telah Diubah Ke Pp Bokep upin ipin!'
+  conn.sRevoke = 'Link group telah diubah Ke https://xxx.com'
   conn.handler = handler.handler.bind(global.conn)
   conn.participantsUpdate = handler.participantsUpdate.bind(global.conn)
   conn.groupsUpdate = handler.groupsUpdate.bind(global.conn)
