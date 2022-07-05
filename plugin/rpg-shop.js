@@ -1,5 +1,8 @@
 const items = {
     buy: {
+        mbox: {
+            money: 1500000
+        },
         limit: {
             exp: 999
         },
@@ -26,6 +29,9 @@ const items = {
         }
     },
     sell: {
+        mbox {
+            money: 2000
+        },
         potion: {
             money: 125,
         },
