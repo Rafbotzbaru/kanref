@@ -1,4 +1,17 @@
 const rewards = {
+    mbox: {
+        money: 99999,
+        exp: 6980,
+        trash: 26,
+        potion: [2,6,4,9,8,2,6],
+        common: [9,5,6,7,9,2,4,3],
+        uncommon: [9,6,7,5,8,4,3]
+        gold: [9,9,9,4,8,7,9],
+        diamond: [9,9,5,7,9,8,6,3]
+        rock: [6,9,8,9,7,5]
+        mythic: [6,8,6,7,9,8,9],
+        legendary: [9,9,9,9,5,4,7,8]
+    },
     common: {
         money: 101,
         exp: 201,
@@ -95,15 +108,15 @@ type *${usedPrefix}buy ${type} ${count - user[type]}* to buy
     user[type] -= count * 1
     m.reply(`
 You have opened *${count}* ${global.rpg.emoticon(type)}${type} crate and got:
-${Object.keys(crateReward).filter(v => v && crateReward[v] && !/legendary|pet|mythic|diamond|emerald/i.test(v)).map(reward => `
+${Object.keys(crateReward).filter(v => v && crateReward[v] && !/legendary|mbox|pet|mythic|diamond|emerald/i.test(v)).map(reward => `
 *${global.rpg.emoticon(reward)}${reward}:* ${crateReward[reward]}
 `.trim()).join('\n')}
 `.trim())
-    let diamond = crateReward.diamond, mythic = crateReward.mythic, pet = crateReward.pet, legendary = crateReward.legendary, emerald = crateReward.emerald
+    let diamond = crateReward.diamond, mythic = crateReward.mythic, pet = crateReward.pet, legendary = crateReward.legendary, emerald = crateReward.emerald, mbox = crateReward.mbox
     if (mythic || diamond) m.reply(`
 Congrats you got a rare item, which is ${diamond ? `*${diamond}* ${rpg.emoticon('diamond')}diamond` : ''}${diamond && mythic ? 'and ' : ''}${mythic ? `*${mythic}* ${rpg.emoticon('mythic')}mythic` : ''}
 `.trim())
-    if (pet || legendary || emerald) m.reply(`
+    if (mbox || pet || legendary || emerald) m.reply(`
 Congrats you got a epic item, which is ${pet ? `*${pet}* ${rpg.emoticon('pet')}pet` : ''}${pet && legendary && emerald ? ', ' : (pet && legendary || legendary && emerald || emerald && pet) ? 'and ' : ''}${legendary ? `*${legendary}* ${rpg.emoticon('legendary')}legendary` : ''}${pet && legendary && emerald ? 'and ' : ''}${emerald ? `*${emerald}* ${rpg.emoticon('emerald')}emerald` : ''}
 `.trim())
 }
